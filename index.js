@@ -12,10 +12,10 @@ app.get("/",function(req,res){
     // You cannot send two responses
 });
 
-
-
-
-
+app.get("/secondPage/:name",function(req,res){
+  res.send("You've landed in the second page. Well done "+req.params.name+"!");
+  
+});
 
 
 app.listen(4000, function(erro){
