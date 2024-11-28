@@ -5,7 +5,15 @@ const app = express();
 // in a variable so it may be used, as you'll see above
 
 app.get("/",function(req,res){
-    res.send("Response caught");
+    if(req.query["variavel"])
+      {
+        res.send("Query caught: "+req.query["variavel"]);
+      }
+      else
+      {
+        res.send("Response caught");
+      }
+
     // Response is always necessary in a route, else the function
     // keeps reloading itself, never returning anything to user
     // .send ENDS THE CONNECTION
