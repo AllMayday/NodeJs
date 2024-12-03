@@ -13,3 +13,5 @@ SELECT * FROM users
 UPDATE users
 SET User_age = 35
 where user_name = 'Mary'
+
+--Updating and constructing database
